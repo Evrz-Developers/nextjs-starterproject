@@ -1,18 +1,16 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import DefaultFooter from './DefaultFooter'
 import DefaultHeader from './DefaultHeader'
 
-const DefaultLayout = ({ children }) => {
+const DefaultLayout = ({ children, className }) => {
     return (
-        <Fragment>
+        <>
             <DefaultHeader />
-
-            <div className='min-h-[95vh]'>
+            <div className={`h-full ${className}`}>
                 {children}
             </div>
-
             <DefaultFooter />
-        </Fragment>
+        </>
     )
 }
 
